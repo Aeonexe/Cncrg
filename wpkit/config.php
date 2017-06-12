@@ -1233,7 +1233,7 @@ Buscar en el codex en admin menu */
 		}
 
 /************************************************************************************************************************
-Cuenta caracteres en el excerpt */
+Cuenta caracteres en el excerpt *
 
 		function wk_excerpt_count_js(){
 		      echo '<script>jQuery(document).ready(function(){

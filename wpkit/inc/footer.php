@@ -1,13 +1,13 @@
 	<!--Script-->
-	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery-2.1.3.min.js"></script>
+	<!-- <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-2.1.3.min.js"></script> -->
 	<!--Modernizr-->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
 
-	<?php 
+	<?php
 
 		global $is_IE;
 
-		if( ! $is_IE and get_option( 'wk_option_library_oknav' ) ) : 
+		if( ! $is_IE and get_option( 'wk_option_library_oknav' ) ) :
 
         $classes[] = 'iexplorer'; if(preg_match('/MSIE ([0-9]+)([a-zA-Z0-9.]+)/', $_SERVER['HTTP_USER_AGENT'], $browser_version)) $classes[] = 'iexplorer'.$browser_version[1]; ?>
 
@@ -20,12 +20,12 @@
 	    <style id="style-okaynav">
 		    .okayNav a {color: inherit; font-size: inherit; font-weight: inherit;}
 		    .okayNav__menu-toggle {top: 12px; height: 18px; }
-	    </style> 
+	    </style>
 
 	<?php endif; ?>
 
 	<?php if( get_option( 'wk_option_library_fancybox' ) ) : ?>
-		
+
 		<!--Fancybox-->
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
@@ -79,7 +79,7 @@
 		<script src="<?php echo get_template_directory_uri(); ?>/assets/flickity/flickity.pkgd.min.js"></script>
 		<script>
 			/*$('.slider').flickity({
-				
+
 			});*/
 		</script>
 	<?php endif; ?>
@@ -92,13 +92,13 @@
 
 
 	<!--Page scripts-->
-	<?php 
+	<?php
 
-		/* 
+		/*
 		* Toma el campo guardado en metabox scriptdiv y opción Header
 		*/
 
-		if( wk_scriptdiv_get_meta( 'wk_scriptdiv_locate' ) == 'Footer' ) { 
+		if( wk_scriptdiv_get_meta( 'wk_scriptdiv_locate' ) == 'Footer' ) {
 
 			$script = wk_scriptdiv_get_meta( 'wk_scriptdiv_scripts' ); ?>
 
@@ -106,8 +106,7 @@
 				<?php echo $script; ?>
 			</script>
 
-			<?php 
-		} 
+			<?php
+		}
 
 	?>
-	

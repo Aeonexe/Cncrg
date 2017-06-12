@@ -2,7 +2,7 @@
 
 /**
 *
-* Página 
+* Página
 *
 * @package WPKit
 * @author ALUMIN
@@ -12,7 +12,11 @@
 */
 
 get_header(); ?>
-                             
-	<?php get_template_part('wpkit/systems/layouts/post'); ?>
+
+      <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
+
+      	<?php get_template_part( 'parts/page-content' ); ?>
+
+      <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

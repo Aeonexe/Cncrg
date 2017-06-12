@@ -1,0 +1,229 @@
+/*
+
+Azul aqua: #88d9eb
+Verde aqua: #63b2c3
+Verde oscuro: #32616c
+gris claro: #f1f1f1
+
+*/
+
+
+/*******************************************************************************
+Color */
+
+.ui-text-aqua {
+      color: #88d9eb
+}
+
+.ui-text-green {
+      color: #63b2c3
+}
+
+.ui-text-black {
+      color: #ff
+}
+
+.ui-bg-aqua {
+      background-color: #88d9eb;
+}
+
+.ui-bg-green {
+      background-color: #63b2c3;
+}
+
+.ui-bg-green-dark {
+      background-color: #32616c;
+}
+
+.ui-bg-gray {
+      background-color: #f1f1f1;
+}
+
+hr.ui-divider,
+span.ui-divider {
+border-color: #88d9eb;
+border-top: 0 !important;
+border-width: 1px;
+border-style: solid;
+width: calc(100% / 3);
+margin-left: 0;
+transition: all .25s linear;
+}
+
+
+/*******************************************************************************
+Icon scroll */
+
+      .ui-icon-scroll {
+            background-image: url(../img/scroll-sprites.png);
+            width: 40px;
+            height: 80px;
+            margin: auto;
+            animation: scroll 2s steps(80) infinite;
+      }
+
+      @keyframes scroll {
+            100% { background-position: 0 6400px }
+      }
+
+
+/*******************************************************************************
+Botónes */
+
+      .ui-button {
+      font-family: 'Brandon Grotesque Bold', 'Open sans', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: inherit;
+      text-decoration: inherit;
+      padding: 12px;
+      margin: 12px;
+      background-color: #fff;
+      cursor: pointer;
+      transition: all .25s linear;
+      display: inline-block;
+      min-width: 230px;
+      overflow: hidden;
+      position: relative;
+      }
+
+      /* Animación */
+
+            .ui-button .ui-button-overlay {
+            display: block;
+            position: absolute;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transform: translateY(-200%);
+            transition: all .15s linear;
+            background-color: rgba(136, 217, 235, 0.5);
+            }
+
+            .ui-button .ui-button-text {
+            position: relative;
+            z-index: 1;
+            }
+
+            .ui-button .ui-button-overlay:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 100%;
+            background-color: rgba(90, 161, 177, 0.5);
+            }
+
+            .ui-button:hover .ui-button-overlay {
+            transform: translateY(0%);
+            }
+
+      .ui-button-o {
+      background-color: transparent;
+      box-shadow: none;
+      border: 1px solid #88d9eb;
+      }
+
+      .ui-icon {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+
+            .ui-icon-mail {
+            background-image: url(../img/icon-mail.svg);
+            }
+            .ui-icon-phone {
+            background-image: url(../img/icon-phone.svg);
+            }
+            .ui-icon-user {
+            background-image: url(../img/icon-user.svg);
+            }
+            .ui-icon-mensaje {
+            background-image: url(../img/icon-mensaje.svg);
+            }
+            .ui-icon-youtube {
+            background-image: url(../img/icon-youtube.svg);
+            }
+            .ui-icon-linkedin {
+            background-image: url(../img/icon-linkedin.svg);
+            }
+            .ui-icon-twitter {
+            background-image: url(../img/icon-twitter.svg);
+            }
+            .ui-icon-facebook {
+            background-image: url(../img/icon-facebook.svg);
+            }
+            .ui-icon-back {
+            background-image: url(../img/icon-back.svg);
+            }
+            .ui-icon-forward {
+            background-image: url(../img/icon-forward.svg);
+            }
+            .ui-icon-play {
+            background-image: url(../img/icon-play.svg);
+            }
+
+      .ui-icon-youtube,
+      .ui-icon-linkedin,
+      .ui-icon-twitter,
+      .ui-icon-facebook {
+      width: 34px;
+      height: 34px;
+      }
+
+      .ui-icon-forward,
+      .ui-icon-back {
+      width: 55px;
+      height: 55px;
+      }
+
+      .ui-icon-mail, .ui-icon-phone {
+      width: 26px;
+      height: 26px;
+      }
+
+/*******************************************************************************
+Títulos */
+
+/* Estilizado */
+
+      article h3,
+      .ui-title-stilized {
+      letter-spacing: 2px;
+      display: inline-block;
+      padding-bottom: 12px;
+      }
+
+            article h3:before,
+            .ui-title-stilized:before {
+            content: "";
+            display: block;
+            }
+
+            article h3:after,
+            .ui-title-stilized:after {
+            content: "";
+            border-bottom: 1px solid #63b2c3;
+            display: block;
+            width: calc(100% / 3);
+            padding-top: 12px;
+            }
+
+      .ui-title-stilized.small {
+      font-size: 11px !important;
+      text-transform: uppercase;
+      }
+
+      .ui-title-stilized.center:after {
+      margin: auto;
+      }

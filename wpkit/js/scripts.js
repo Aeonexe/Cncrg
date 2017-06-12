@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
 		$('.upload-btn').click(function(e) {
 			e.preventDefault();
 			var current = $(this);
-			var image = wp.media({ 
+			var image = wp.media({
 				title: 'Upload Image',
 				// mutiple: true if you want to upload multiple files at once
 				multiple: false

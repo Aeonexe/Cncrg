@@ -8,5 +8,21 @@ License: © Copyright Alumin.Agency All rights reserved
 @Developer: Alberto Hartzet
 */
 
+@import url('fonts/proxima-nova/font.css');
+@import url('fonts/brandon-grotesque/font.css');
 
+      .post-links {
+      position: absolute;
+      bottom: 12px;
+      right: 48px;
+      }
 
+            .post-links a {
+            margin-left: 14px;
+            }
+
+/*.post-edit-link {
+    position: absolute;
+    bottom: 48px;
+    right: 48px;
+}*/

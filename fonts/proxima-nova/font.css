@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Proxima Nova Soft';
+  src: url('mark_simonson_-_proxima_nova_soft_bold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('mark_simonson_-_proxima_nova_soft_bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('mark_simonson_-_proxima_nova_soft_bold-webfont.woff') format('woff'), /* Modern Browsers */
+       url('mark_simonson_-_proxima_nova_soft_bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('mark_simonson_-_proxima_nova_soft_bold-webfont.svg#e91c3ce145d8f8cfc2adf54bfb26adcf') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Soft Md';
+  src: url('mark_simonson_-_proxima_nova_soft_medium-webfont.eot'); /* IE9 Compat Modes */
+  src: url('mark_simonson_-_proxima_nova_soft_medium-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('mark_simonson_-_proxima_nova_soft_medium-webfont.woff') format('woff'), /* Modern Browsers */
+       url('mark_simonson_-_proxima_nova_soft_medium-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('mark_simonson_-_proxima_nova_soft_medium-webfont.svg#22c77730cfed7862d8a6a614af107d35') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Soft';
+  src: url('mark_simonson_-_proxima_nova_soft_regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('mark_simonson_-_proxima_nova_soft_regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('mark_simonson_-_proxima_nova_soft_regular-webfont.woff') format('woff'), /* Modern Browsers */
+       url('mark_simonson_-_proxima_nova_soft_regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('mark_simonson_-_proxima_nova_soft_regular-webfont.svg#1d68167e93e22541602ce882c956f352') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Soft Sb';
+  src: url('mark_simonson_-_proxima_nova_soft_semibold-webfont.eot'); /* IE9 Compat Modes */
+  src: url('mark_simonson_-_proxima_nova_soft_semibold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('mark_simonson_-_proxima_nova_soft_semibold-webfont.woff') format('woff'), /* Modern Browsers */
+       url('mark_simonson_-_proxima_nova_soft_semibold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('mark_simonson_-_proxima_nova_soft_semibold-webfont.svg#02682c225721764131ced835a2fadfba') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+

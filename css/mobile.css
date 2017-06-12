@@ -1,0 +1,61 @@
+h1, h2, h3, h4, h5, h6 {
+    font-size: 28px !important;
+    line-height: 1;
+}
+
+p {
+      line-height: 1.35;
+}
+
+
+/* Header logo */
+            #main-header {
+            position: static;
+            background-color: #63b3c4;
+            }
+
+            .site-main-logo svg {
+            width: 140px;
+            margin: auto;
+            display: block;
+            }
+
+.site-servicio {
+    width: calc(100% / 1);
+    height: calc((100vw) / 1);
+}
+
+body, .site-page, .site-section, #main-footer {
+    padding: 24px !important;
+}
+
+.ui-icon {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* Page estadísticas */
+
+      .site-block {
+          margin: 13px 0 !important;
+      }
+
+
+/* Slider testimonios */
+            .slider-testimonial .slick-arrow {
+            width: 24px;
+            height: 24px;
+            bottom: 24px;
+            }
+
+            .slider-testimonial .slick-next {
+            right: 12px;
+            }
+
+            .slider-testimonial .slick-prev {
+            left: 12px;
+            }
+
+            .slider-testimonial .slide-title-container {
+            font-size: 18px !important;
+            }

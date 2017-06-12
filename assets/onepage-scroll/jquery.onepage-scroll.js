@@ -1,5 +1,5 @@
 /* ===========================================================
- * jquery-onepage-scroll.js v1.3.1
+ * jquery-onepage-scroll.js v1.3
  * ===========================================================
  * Copyright 2013 Pete Rojwongsuriya.
  * http://www.thepetedesign.com
@@ -28,13 +28,13 @@
     loop: true,
     responsiveFallback: false,
     direction : 'vertical'
-  };
+	};
 
-  /*------------------------------------------------*/
-  /*  Credit: Eike Send for the awesome swipe event */
-  /*------------------------------------------------*/
+	/*------------------------------------------------*/
+	/*  Credit: Eike Send for the awesome swipe event */
+	/*------------------------------------------------*/
 
-  $.fn.swipeEvents = function() {
+	$.fn.swipeEvents = function() {
       return this.each(function() {
 
         var startX,
@@ -94,29 +94,16 @@
 
     $.fn.transformPage = function(settings, pos, index) {
       if (typeof settings.beforeMove == 'function') settings.beforeMove(index);
-
-      // Just a simple edit that makes use of modernizr to detect an IE8 browser and changes the transform method into
-      // an top animate so IE8 users can also use this script.
-      if($('html').hasClass('ie8')){
-        if (settings.direction == 'horizontal') {
-          var toppos = (el.width()/100)*pos;
-          $(this).animate({left: toppos+'px'},settings.animationTime);
-        } else {
-          var toppos = (el.height()/100)*pos;
-          $(this).animate({top: toppos+'px'},settings.animationTime);
-        }
-      } else{
-        $(this).css({
-         //  "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)", // hrtzt
-         // "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-         // "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-         // "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-         // "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-         // "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
-         // "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-         "transition": "all " + settings.animationTime + "ms " + settings.easing
-        });
-      }
+      $(this).css({
+        "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+        "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
+        "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+        "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
+        "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+        "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
+        "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+        "transition": "all " + settings.animationTime + "ms " + settings.easing
+      });
       $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
         if (typeof settings.afterMove == 'function') settings.afterMove(index);
       });
@@ -218,18 +205,18 @@
       var typeOfRF = typeof settings.responsiveFallback
 
       if(typeOfRF == "number"){
-        valForTest = $(window).width() < settings.responsiveFallback;
+      	valForTest = $(window).width() < settings.responsiveFallback;
       }
       if(typeOfRF == "boolean"){
-        valForTest = settings.responsiveFallback;
+      	valForTest = settings.responsiveFallback;
       }
       if(typeOfRF == "function"){
-        valFunction = settings.responsiveFallback();
-        valForTest = valFunction;
-        typeOFv = typeof valForTest;
-        if(typeOFv == "number"){
-          valForTest = $(window).width() < valFunction;
-        }
+      	valFunction = settings.responsiveFallback();
+      	valForTest = valFunction;
+      	typeOFv = typeof valForTest;
+      	if(typeOFv == "number"){
+      		valForTest = $(window).width() < valFunction;
+      	}
       }
 
       //end modification
@@ -299,17 +286,13 @@
       });
 
       if (settings.direction == 'horizontal')
-        // leftPos = leftPos + 100; // Original hrtzt
-        leftPos = leftPos + 0;
+        leftPos = leftPos + 100;
       else
-        // topPos = topPos + 100; // Original hrtzt
-        topPos = topPos + 0;
+        topPos = topPos + 100;
 
 
       if(settings.pagination == true) {
-		var title = document.querySelectorAll('.page[title]');
-		//paginationList += '<li id="menu-item"><a data-index="'+(i+1)+'"" href="#' + (i+1) + '">'+ title[i].title +'</a></li>'
-		paginationList += '<li id="menu-item-'+ title[i].title.toLowerCase() +'" title="'+ title[i].title.toLowerCase() +'" ><a data-index="'+(i+1)+'" href="#' + (i+1) + '">'+ title[i].title +'</a></li>' //hrtzt
+        paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
       }
     });
 
@@ -400,9 +383,6 @@
               if (tag != 'input' && tag != 'textarea') el.moveUp()
             break;
             case 40:
-              if (tag != 'input' && tag != 'textarea') el.moveDown()
-            break;
-            case 32: //spacebar
               if (tag != 'input' && tag != 'textarea') el.moveDown()
             break;
             case 33: //pageg up
