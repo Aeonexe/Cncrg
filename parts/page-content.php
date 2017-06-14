@@ -37,9 +37,13 @@
 
                               <a href="#video-01" class="ui-icon ui-icon-play wk-margin-right-24 fancybox-thumb"></a>
 
-                              <div id="video-01" style="display: none;"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZnmK_9k0XzI" frameborder="0" allowfullscreen></iframe></div>
+                              <div id="video-01" style="display: none;" class="video-container">
 
-                              <a class="ui-title-stilized small" href="#">Un ángel guardian te espera</a>
+                                  <iframe width="1000" height="563" src="https://www.youtube.com/embed/ZnmK_9k0XzI" frameborder="0" allowfullscreen></iframe>
+
+                                </div>
+
+                              <a class="ui-title-stilized small" href="<?php bloginfo( 'url' ); ?>/#page-contacto">Un ángel guardian te espera</a>
 
                         </article>
 

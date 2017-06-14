@@ -4,6 +4,8 @@
 
 		<head <?php wk_opengraph_header(); ?>>
 
+			<?php $base_url = get_template_directory_uri(); ?>
+
 			<?php wp_head(); ?>
 
 			<?php // Eso es todo Puedes añadir tags a la cabecera desde aquí ?>
@@ -70,7 +72,8 @@
 				<nav id="main-nav" class="wk-d">
 
 					<div id="nav-contact">
-						<span id="nav-call"  class="nav-item">Contrata ahora</span>
+<!-- 						<span id="nav-call"  class="nav-item">Contrata ahora</span> -->
+						<a id="nav-call" class="ui-button ui-button-o" href="#page-contacto"><span class="ui-button-overlay"></span><span class="ui-button-text">Contrata ahora</span></a>
 						<a id="nav-phone" class="nav-item nav-icon ui-bg-aqua" href="tel:<?php the_field( 'site_info_telefono', 'option' ); ?>"><img width="18" src="<?php echo get_template_directory_uri(); ?>/img/icon-phone-alt.svg"></a>
 						<a id="nav-mail"  class="nav-item nav-icon ui-bg-green" href="mailto:<?php the_field( 'site_info_email', 'option' ); ?>?subject=Información"><img width="18" src="<?php echo get_template_directory_uri(); ?>/img/icon-mail-alt.svg"></a>
 					</div>
