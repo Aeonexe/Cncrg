@@ -17,14 +17,24 @@ gris claro: #f1f1f1
 	color: #fff;
 	font-size: 18px;
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased; /* fix chrome text rendering */
 	}
 
 	body,
 	.site-page,
-	.site-section,
+	.site-section:not(.wk-section),
 	#main-footer {
 	box-sizing: border-box;
 	padding: 48px !important;
+	}
+
+	.wk-section {
+	      outline: none;
+	}
+
+	.site-section.wk-section {
+	box-sizing: border-box;
+	padding: 48px 24px;
 	}
 
 	address {
@@ -44,10 +54,20 @@ gris claro: #f1f1f1
 	Header */
 
 	#main-header {
-	position: absolute;
+	position: fixed;
 	z-index: 10;
-	top: 0;
+	/*top: 0;*/
+	top: calc(48px * 1);
+	transition: top 0.25s linear;
 	}
+
+		body.is-scrolling #main-header {
+		      top: 0;
+		}
+
+		body.viewing-page-contacto #main-header {
+		      top: calc(48px * 3);
+		}
 
 		.site-main-logo svg {
 		width: 100%;
@@ -177,7 +197,7 @@ gris claro: #f1f1f1
 					}
 
 					#nav-menu .menu-item.active:after {
-					width: calc(100% / 3);
+					width: calc(100% / 2.5);
 					}
 
 					.viewing-page-servicios #nav-menu .menu-item:after,
@@ -233,7 +253,7 @@ gris claro: #f1f1f1
 
 		.site-page,
 		#page-contacto .site-section {
-		padding-top: 180px !important;
+		padding-top: 160px !important;
 		}
 
 		.site-page,
@@ -257,6 +277,70 @@ gris claro: #f1f1f1
 		.site-page-generic article {
 		margin: auto;
 		}
+
+		/*******************************************************************************
+		Sections styling */
+
+		[data-page='home'] h1,
+	       	[data-page='que-es-concierge'] h3 {
+		      font-family: 'Proxima Nova Soft Sb';
+		}
+
+		[data-page='home'] h1 span {
+			display: block;
+		}
+
+		[data-page='home'] p:first-of-type,
+		[data-page='que-es-concierge'] p:first-of-type,
+		[data-page='servicios'] p:first-of-type {
+		      line-height: 1.3;
+		}
+
+		[data-page='home'] .ui-button,
+		[data-page='pacientes'] .ui-button,
+		[data-page='quieres-contratar-el-servicio'] .ui-button {
+		      margin-top: 22px;
+		      padding: 16px 22px;
+		}
+
+		[data-page='que-es-concierge'] h3 {
+		      margin-bottom: 0;
+		}
+
+		[data-page='que-es-concierge'] article {
+		      max-width: 500px;
+		}
+
+		[data-page='que-es-concierge'] p:first-of-type {
+		      margin-bottom: 3rem;
+		}
+
+		[data-page='pacientes'] p:first-of-type {
+		      font-family: 'Proxima Nova Soft Sb';
+		}
+
+		[data-page='quieres-contratar-el-servicio'] article {
+		      max-width: 630px;
+		}
+
+		[data-page='quieres-contratar-el-servicio'] h1 {
+		      position: relative;
+		      margin-bottom: 3rem;
+		}
+
+		[data-page='quieres-contratar-el-servicio'] h1:after {
+		      content: '';
+		      position: absolute;
+		      left: 0;
+		      right: 0;
+		      bottom: -1rem;
+		      display: block;
+		      margin: 0 auto;
+		      width: 100px;
+		      height: 1px;
+		      background-color: #88d9eb;
+		}
+
 
 		/*******************************************************************************
 		Page estadísticas */
@@ -383,6 +467,10 @@ gris claro: #f1f1f1
 				padding: 20px;
 				}
 
+				[data-page='certificados'] h3 {
+				      font-family: 'Proxima Nova Soft Sb';
+				}
+
 			/*******************************************************************************
 			Page Contacto */
 
@@ -404,6 +492,46 @@ gris claro: #f1f1f1
 				top: calc(48px * 2) !important;
 				}
 
+				[data-page='contacto'] h3 {
+				      position: relative;
+				      margin-bottom: 2rem;
+				}
+
+				[data-page='contacto'] h3:after {
+				      content: '';
+				      position: absolute;
+				      left: 0;
+				      bottom: -1rem;
+				      display: block;
+				      width: 100px;
+				      height: 1px;
+				      background-color: #88d9eb;
+				}
+
+				[data-page='contacto'] h3 strong {
+				      display: block;
+				}
+
+				[data-page='contacto'] address {
+				      font-family: 'Proxima Nova Soft Sb';
+				}
+
+				[data-page='contacto'] address span:nth-last-of-type(1) {
+				      display: block;
+				      width: 60%;
+				      font-size: 14px;
+				}
+
+				[data-page='contacto'] address span:nth-last-of-type(1),
+				[data-page='contacto'] address span:nth-last-of-type(2) {
+				      font-family: 'Proxima Nova Soft';
+				}
+
+				[data-page='contacto'] textarea {
+				      width: 90%;
+				}
+
+
 
 	/*******************************************************************************
 	Main footer */
@@ -418,7 +546,8 @@ gris claro: #f1f1f1
 
 			#main-footer .menu .menu-item {
 			text-transform: uppercase;
-			font-size: 10px;
+			padding-right: 2rem;
+			font-size: 0.75rem;
 			letter-spacing: 2px;
 			display: inline-block;
 			}

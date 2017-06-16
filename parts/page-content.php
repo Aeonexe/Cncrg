@@ -3,7 +3,7 @@
 
       <?php if( $post->post_name == 'home' ) : ?>
 
-            <section data-page="<?php echo $post->post_name; ?>" id="page-<?php echo $post->post_name; ?>" class="section page site-page site-page-generic wk-section" style="<?php if( get_field( 'site_bg_img' ) ) : ?>background-image: url(<?php the_field( 'site_bg_img' ); ?>);<?php endif ?> <?php if( get_field( 'site_bg_color' ) ) : ?>background-color: <?php the_field( 'site_bg_color' ); ?>;<?php endif ?>">
+            <section data-page="<?php echo $post->post_name; ?>" id="page-<?php echo $post->post_name; ?>" class="section page site-page site-page-generic wk-section" style="<?php if( get_field( 'site_bg_img' ) ) : ?>background-image: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0)), url(<?php the_field( 'site_bg_img' ); ?>);<?php endif ?> <?php if( get_field( 'site_bg_color' ) ) : ?>background-color: <?php the_field( 'site_bg_color' ); ?>;<?php endif ?>">
 
                   <?php do_action( 'page_styles' ); ?>
 
