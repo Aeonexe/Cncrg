@@ -205,10 +205,10 @@
 
                                     <div class="site-social-links">
 
-                                          <a href="<?php the_field( 'site_info_fb', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.svg"></a>
-                                          <a href="<?php the_field( 'site_info_tw', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-twitter.svg"></a>
-                                          <a href="<?php the_field( 'site_info_linkedin', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-linkedin.svg"></a>
-                                          <a href="<?php the_field( 'site_info_youtube', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_fb', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_tw', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-twitter.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_linkedin', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-linkedin.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_youtube', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.svg"></a>
 
                                     </div>
 

@@ -281,6 +281,10 @@ gris claro: #f1f1f1
 		/*******************************************************************************
 		Sections styling */
 
+		[data-page='home'].site-page-generic {
+		      justify-content: flex-end !important;
+		}
+
 		[data-page='home'] h1,
 	       	[data-page='que-es-concierge'] h3 {
 		      font-family: 'Proxima Nova Soft Sb';
