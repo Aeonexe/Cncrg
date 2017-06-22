@@ -62,11 +62,11 @@
 
                   <div class="wk-section-wrap">
 
-                        <div class="site-block-container wk-cols">
+                        <div class="site-block-container slider-estadisticas">
 
                               <?php if( have_rows( 'site_estadisticas_bloques' ) ) : while( have_rows( 'site_estadisticas_bloques' ) ) : the_row(); ?>
 
-                                    <div class="site-block wk-col">
+                                    <div class="site-block">
 
                                           <div class="site-block-content">
 

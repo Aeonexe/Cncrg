@@ -349,7 +349,31 @@ gris claro: #f1f1f1
 		/*******************************************************************************
 		Page estadísticas */
 
+			#page-estadisticas .site-block {
+			min-height: 328px;
+			display: flex;
+			align-items: center;
+			}
 
+				#page-estadisticas .slick-arrow {
+				position: absolute;
+				top: calc(100%);
+				}
+
+					#page-estadisticas .slick-arrow.slick-next {
+					right: calc(50% - 76px);
+					}
+
+					#page-estadisticas .slick-arrow.slick-prev {
+					left: calc(50% - 76px);
+					}
+
+				#page-estadisticas .slick-dots {
+				position: absolute;
+				bottom: 100%;
+				left: 0;
+				right: 0;
+				}
 
 		/*******************************************************************************
 		Page site-servicios */

@@ -41,6 +41,31 @@ jQuery(document).ready(function($){
 		// asNavFor: '.da-slider-nav',
 		autoplay: true,
 	});
+	
+	$('.slider-estadisticas').slick({
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		dots: true,
+		arrows: true,
+		prevArrow: '<span class="slick-prev"><img width="48" src="http://codecase.xyz/cherrybomb/concierge/wp-content/themes/Concierge/img/icon-back.svg"></span>',
+		nextArrow: '<span class="slick-next"><img width="48" src="http://codecase.xyz/cherrybomb/concierge/wp-content/themes/Concierge/img/icon-forward.svg"></span>',
+		//adaptiveHeight: true
+		// fade: true,
+		// asNavFor: '.da-slider-nav',
+		autoplay: true,
+		responsive: [
+			{
+			  breakpoint: 770,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: true
+			  }
+			},
+		]
+	});
 
 
 	$('.slider-testimonial').slick({

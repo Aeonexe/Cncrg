@@ -59,3 +59,10 @@ body, .site-page, .site-section, #main-footer {
             .slider-testimonial .slide-title-container {
             font-size: 18px !important;
             }
+
+/*******************************************************************************
+Page estadísticas */
+        
+        #page-estadisticas {
+        padding: 100px 48px !important;
+        }
