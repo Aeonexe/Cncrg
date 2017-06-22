@@ -60,6 +60,7 @@ Icon scroll */
             height: 80px;
             margin: auto;
             animation: scroll 2s steps(80) infinite;
+            transform: scale(.7);
       }
 
       @keyframes scroll {
@@ -100,7 +101,7 @@ Botónes */
             left: 0;
             transform: translateY(-200%);
             transition: all .15s linear;
-            background-color: rgba(136, 217, 235, 0.5);
+            background-color: #88d9eb;
             }
 
             .ui-button .ui-button-text {
@@ -227,3 +228,61 @@ Títulos */
       .ui-title-stilized.center:after {
       margin: auto;
       }
+
+/* Formidable hack button */
+        .frm_submit {
+        display: inline-block;
+        margin-left: 2px;
+        }
+
+        .frm_submit .ui-button-overlay:after {
+        content: "";
+        width: 230px;
+        height: 44px;
+        background-color: #88d9eb;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .25s linear;
+        transform: translateY(-87px);
+        z-index: 10;
+        }
+
+        .frm_submit .ui-button-overlay {
+        position: absolute;
+        overflow: hidden;
+        width: 230px;
+        height: 44px;
+        transition: all .25s linear;
+        }
+
+        .frm_submit [type="submit"] {
+        margin: 0;
+        position: relative;
+        z-index: 10;
+        color: #383838;
+        }
+
+        .frm_submit .ui-button-overlay:before {
+        content: "";
+        width: 230px;
+        height: 44px;
+        background-color: rgba(0, 44, 50, 0.35);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all .25s linear;
+        transform: translateY(-43px);
+        z-index: 10;
+        }
+
+        .frm_submit [type="submit"] {
+        color: #fff;
+        }
+
+        .frm_submit:hover .ui-button-overlay:before,
+        .frm_submit:hover .ui-button-overlay:after {
+        transform:translateY(0px);
+        }

@@ -3,7 +3,7 @@
 
       <?php if( $post->post_name == 'home' ) : ?>
 
-            <section data-page="<?php echo $post->post_name; ?>" id="page-<?php echo $post->post_name; ?>" class="section page site-page site-page-generic wk-section" style="<?php if( get_field( 'site_bg_img' ) ) : ?>background-image: url(<?php the_field( 'site_bg_img' ); ?>);<?php endif ?> <?php if( get_field( 'site_bg_color' ) ) : ?>background-color: <?php the_field( 'site_bg_color' ); ?>;<?php endif ?>">
+            <section data-page="<?php echo $post->post_name; ?>" id="page-<?php echo $post->post_name; ?>" class="section page site-page site-page-generic wk-section" style="<?php if( get_field( 'site_bg_img' ) ) : ?>background-image: linear-gradient(0deg, rgba(0,0,0,0.8), rgba(0,0,0,0)), url(<?php the_field( 'site_bg_img' ); ?>);<?php endif ?> <?php if( get_field( 'site_bg_color' ) ) : ?>background-color: <?php the_field( 'site_bg_color' ); ?>;<?php endif ?>">
 
                   <?php do_action( 'page_styles' ); ?>
 
@@ -37,9 +37,13 @@
 
                               <a href="#video-01" class="ui-icon ui-icon-play wk-margin-right-24 fancybox-thumb"></a>
 
-                              <div id="video-01" style="display: none;"><iframe width="560" height="315" src="https://www.youtube.com/embed/ZnmK_9k0XzI" frameborder="0" allowfullscreen></iframe></div>
+                              <div id="video-01" style="display: none;" class="video-container">
 
-                              <a class="ui-title-stilized small" href="#">Un ángel guardian te espera</a>
+                                  <iframe width="1000" height="563" src="https://www.youtube.com/embed/ZnmK_9k0XzI" frameborder="0" allowfullscreen></iframe>
+
+                                </div>
+
+                              <a class="ui-title-stilized small" href="<?php bloginfo( 'url' ); ?>/#page-contacto">Un ángel guardian te espera</a>
 
                         </article>
 
@@ -201,10 +205,10 @@
 
                                     <div class="site-social-links">
 
-                                          <a href="<?php the_field( 'site_info_fb', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.svg"></a>
-                                          <a href="<?php the_field( 'site_info_tw', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-twitter.svg"></a>
-                                          <a href="<?php the_field( 'site_info_linkedin', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-linkedin.svg"></a>
-                                          <a href="<?php the_field( 'site_info_youtube', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_fb', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-facebook.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_tw', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-twitter.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_linkedin', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-linkedin.svg"></a>
+                                          <a target="_blank" href="<?php the_field( 'site_info_youtube', 'option' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-youtube.svg"></a>
 
                                     </div>
 

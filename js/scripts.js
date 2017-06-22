@@ -49,8 +49,8 @@ jQuery(document).ready(function($){
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
-		prevArrow: '<span class="slick-prev"><</span>',
-		nextArrow: '<span class="slick-next">></span>',
+		prevArrow: '<span class="slick-prev"><img width="48" src="http://codecase.xyz/cherrybomb/concierge/wp-content/themes/Concierge/img/icon-back.svg"></span>',
+		nextArrow: '<span class="slick-next"><img width="48" src="http://codecase.xyz/cherrybomb/concierge/wp-content/themes/Concierge/img/icon-forward.svg"></span>',
 		//adaptiveHeight: true
 		// fade: true,
 		// asNavFor: '.da-slider-nav',
@@ -130,108 +130,127 @@ jQuery(document).ready(function($){
 
 	// Scroll smothed
 
-	$(document).ready(function(){
-		// $fn.scrollSpeed(step, speed, easing);
-		jQuery.scrollSpeed(100, 2000);
-	});
+// 	$(document).ready(function(){
+// 		// $fn.scrollSpeed(step, speed, easing);
+// 		jQuery.scrollSpeed(200, 400);
+// 	});
 
 	// Custom scrolling speed with jQuery
 	// Source: github.com/ByNathan/jQuery.scrollSpeed
 	// Version: 1.0.2
 
-	(function($) {
+// 	(function($) {
 
-	    jQuery.scrollSpeed = function(step, speed, easing) {
+// 	    jQuery.scrollSpeed = function(step, speed, easing) {
 
-	        var $document = $(document),
-	            $window = $(window),
-	            $body = $('html, body'),
-	            option = easing || 'default',
-	            root = 0,
-	            scroll = false,
-	            scrollY,
-	            scrollX,
-	            view;
+// 	        var $document = $(document),
+// 	            $window = $(window),
+// 	            $body = $('html, body'),
+// 	            option = easing || 'default',
+// 	            root = 0,
+// 	            scroll = false,
+// 	            scrollY,
+// 	            scrollX,
+// 	            view;
 
-	        if (window.navigator.msPointerEnabled)
+// 	        if (window.navigator.msPointerEnabled)
 
-	            return false;
+// 	            return false;
 
-	        $window.on('mousewheel DOMMouseScroll', function(e) {
+// 	        $window.on('mousewheel DOMMouseScroll', function(e) {
 
-	            var deltaY = e.originalEvent.wheelDeltaY,
-	                detail = e.originalEvent.detail;
-	                scrollY = $document.height() > $window.height();
-	                scrollX = $document.width() > $window.width();
-	                scroll = true;
+// 	            var deltaY = e.originalEvent.wheelDeltaY,
+// 	                detail = e.originalEvent.detail;
+// 	                scrollY = $document.height() > $window.height();
+// 	                scrollX = $document.width() > $window.width();
+// 	                scroll = true;
 
-	            if (scrollY) {
+// 	            if (scrollY) {
 
-	                view = $window.height();
+// 	                view = $window.height();
 
-	                if (deltaY < 0 || detail > 0)
+// 	                if (deltaY < 0 || detail > 0)
 
-	                    root = (root + view) >= $document.height() ? root : root += step;
+// 	                    root = (root + view) >= $document.height() ? root : root += step;
 
-	                if (deltaY > 0 || detail < 0)
+// 	                if (deltaY > 0 || detail < 0)
 
-	                    root = root <= 0 ? 0 : root -= step;
+// 	                    root = root <= 0 ? 0 : root -= step;
 
-	                $body.stop().animate({
+// 	                $body.stop().animate({
 
-	                    scrollTop: root
+// 	                    scrollTop: root
 
-	                }, speed, option, function() {
+// 	                }, speed, option, function() {
 
-	                    scroll = false;
+// 	                    scroll = false;
 
-	                });
-	            }
+// 	                });
+// 	            }
 
-	            if (scrollX) {
+// 	            if (scrollX) {
 
-	                view = $window.width();
+// 	                view = $window.width();
 
-	                if (deltaY < 0 || detail > 0)
+// 	                if (deltaY < 0 || detail > 0)
 
-	                    root = (root + view) >= $document.width() ? root : root += step;
+// 	                    root = (root + view) >= $document.width() ? root : root += step;
 
-	                if (deltaY > 0 || detail < 0)
+// 	                if (deltaY > 0 || detail < 0)
 
-	                    root = root <= 0 ? 0 : root -= step;
+// 	                    root = root <= 0 ? 0 : root -= step;
 
-	                $body.stop().animate({
+// 	                $body.stop().animate({
 
-	                    scrollLeft: root
+// 	                    scrollLeft: root
 
-	                }, speed, option, function() {
+// 	                }, speed, option, function() {
 
-	                    scroll = false;
+// 	                    scroll = false;
 
-	                });
-	            }
+// 	                });
+// 	            }
 
-	            return false;
+// 	            return false;
 
-	        }).on('scroll', function() {
+// 	        }).on('scroll', function() {
 
-	            if (scrollY && !scroll) root = $window.scrollTop();
-	            if (scrollX && !scroll) root = $window.scrollLeft();
+// 	            if (scrollY && !scroll) root = $window.scrollTop();
+// 	            if (scrollX && !scroll) root = $window.scrollLeft();
 
-	        }).on('resize', function() {
+// 	        }).on('resize', function() {
 
-	            if (scrollY && !scroll) view = $window.height();
-	            if (scrollX && !scroll) view = $window.width();
+// 	            if (scrollY && !scroll) view = $window.height();
+// 	            if (scrollX && !scroll) view = $window.width();
 
-	        });
-	    };
+// 	        });
+// 	    };
 
-	    jQuery.easing.default = function (x,t,b,c,d) {
+// 	    jQuery.easing.default = function (x,t,b,c,d) {
 
-	        return -c * ((t=t/d-1)*t*t*t - 1) + b;
-	    };
+// 	        return -c * ((t=t/d-1)*t*t*t - 1) + b;
+// 	    };
 
-	})(jQuery);
+// 	})(jQuery);
+
+
+	// Scroll reveal
+
+
+// 	$(window).scroll(function() {
+
+// 		$(".will_appear").each(function(){
+// 			var element_position = $(this).offset().top;
+// 			var scroll_position = $(window).scrollTop();
+// 			var viewport_height = $(window).height();
+
+// 			viewport_height=parseInt(viewport_height);
+
+// 			if(scroll_position+550 > element_position){
+// 			$(this).addClass("on_scroll");
+// 		}
+
+// 	});
 
 
 
